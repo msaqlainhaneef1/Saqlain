@@ -22,6 +22,90 @@
             padding: 0 1rem;
         }
 
+        /* Header Styles */
+        header {
+            background-color: #1E2A44;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 2rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #6B46C1;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #1E2A44;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        footer .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: #6B46C1;
+        }
+
+        /* Adjust body padding to account for fixed header */
+        body {
+            padding-top: 70px;
+        }
+
         /* Hero Section */
         #hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
@@ -844,10 +928,41 @@
             #contact .social-links {
                 justify-content: center;
             }
+
+            /* Responsive Header */
+            header .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">Muhammad Saqlain</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#case-studies">Case Studies</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
@@ -1072,7 +1187,7 @@
                 </div>
                 <div class="contact-info">
                     <p><i class="fas fa-envelope"></i> info@seosolveup.com</p>
-<p><i class="fas fa-envelope"></i> msaqlainhaneef@gmail.com</p>
+                    <p><i class="fas fa-envelope"></i> msaqlainhaneef@gmail.com</p>
                     <p><i class="fas fa-phone"></i> +923213012567</p>
                     <p><i class="fas fa-map-marker-alt"></i> Street#4, near Faizn-e-Attar, Mehria Town Tāndliānwāla, 37100, Pakistan</p>
                     <div class="social-links">
@@ -1084,5 +1199,17 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Muhammad Saqlain. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/muhammad-saqlain" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/saqlain_seo" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://facebook.com/muhammadsaqlain" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
